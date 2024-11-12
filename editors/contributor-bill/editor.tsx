@@ -239,7 +239,7 @@ export default function Editor(props: IProps) {
       <div>
         <label>Invoice Issue Date:</label>
         <DateTimeLocalInput
-          value={state.issued}
+          defaultValue={state.issued}
           onChange={(e) => setIssueDate(e.target.value)}
           style={{ marginTop: "10px", marginLeft: "10px", width: "250px" }}
         />
@@ -247,7 +247,7 @@ export default function Editor(props: IProps) {
       <div>
         <label>Invoice Due Date:</label>
         <DateTimeLocalInput
-          value={state.due || ""}
+          defaultValue={state.due || ""}
           onChange={(e) => setDueDate(e.target.value)}
           style={{ marginTop: "10px", marginLeft: "10px", width: "250px" }}
         />
@@ -262,7 +262,7 @@ export default function Editor(props: IProps) {
         <div>
           <h3>Issuer (Contributor)</h3>
           <FormInput
-            value={state.issuer || ""}
+            defaultValue={state.issuer || ""}
             onChange={(e) => setIssuer(e.target.value)}
             placeholder="@Powerhouse-Ops-Hub"
             style={{ width: "200px" }}
@@ -271,7 +271,7 @@ export default function Editor(props: IProps) {
         <div>
           <h3>Recipient (Bill to)</h3>
           <FormInput
-            value={state.recipient || ""}
+            defaultValue={state.recipient || ""}
             onChange={(e) => setRecipient(e.target.value)}
             placeholder="@Powerhouse-Ops-Hub"
             style={{ width: "200px" }}
