@@ -237,7 +237,7 @@ export default function Editor(props: IProps) {
     <div style={{ padding: "20px" }}>
       <h1 style={{ fontWeight: "bold", fontSize: "2em" }}>Contributor Bill</h1>
       <div>
-        <label>Invoice Issue Date:</label>
+        <label>Issue Date:</label>
         <DateTimeLocalInput
           defaultValue={state.issued}
           onChange={(e) => setIssueDate(e.target.value)}
@@ -245,7 +245,7 @@ export default function Editor(props: IProps) {
         />
       </div>
       <div>
-        <label>Invoice Due Date:</label>
+        <label>Due Date:</label>
         <DateTimeLocalInput
           defaultValue={state.due || ""}
           onChange={(e) => setDueDate(e.target.value)}
