@@ -3,7 +3,6 @@
 * - modify it by implementing the reducer functions
 * - delete the file and run the code generator again to have it reset
 */
-import { utils as documentModelUtils } from 'document-model/document';
 import { ContributorBillContributorBillOperations } from '../../gen/contributor-bill/operations';
 
 export const reducer: ContributorBillContributorBillOperations = {
@@ -17,7 +16,7 @@ export const reducer: ContributorBillContributorBillOperations = {
     },
     addStablecoinLineItemOperation(state, action, dispatch) {
         state.stableComp.push({
-            id: documentModelUtils.hashKey(),
+            id: action.input.id,
             description: action.input.description || '',
             amount: action.input.amount,
             currency: action.input.currency,
@@ -25,7 +24,7 @@ export const reducer: ContributorBillContributorBillOperations = {
     },
     addPowtLineItemOperation(state, action, dispatch) {
         state.powtComp.push({
-            id: documentModelUtils.hashKey(),
+            id: action.input.id,
             description: action.input.description || '',
             amount: action.input.amount,
             projectCode: action.input.projectCode || '',
